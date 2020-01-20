@@ -10,11 +10,10 @@ from element import Element
 from markupsafe import Markup
 
 
-class Alert(Element):
-    def render(self):
-        self.html = "<div class='{0}' role='alert' ".format(self._class)
+class Badges(Element):    def render(self):
+        self.html = "<span class='{0}' ".format(self._class)
         self.addOthersProperty()
-        self.html += "> {0}</div>".format(self.value)
+        self.html += "> {0}</span>".format(self.value)
 
         return Markup(self.html)
         
